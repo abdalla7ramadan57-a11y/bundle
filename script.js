@@ -50,6 +50,6 @@ const WHATSAPP_NUMBER='201091339187';
 el.wa.onclick=(e)=>{
   e.preventDefault();
   if(el.wa.classList.contains('ended')) return;
-  const msg='كابشن — عايز أشترك في عرض الـ48 ساعة: AutoCaption سنة كاملة بـ 500 جنيه بدل 2000.';
+  const msg='كابشن — عايز أشترك في عرض الـ48 ساعة: AutoCaption 3 سنين بـ 500 جنيه بدل 2000.';
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
 };
