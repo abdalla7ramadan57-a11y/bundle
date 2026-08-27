@@ -48,3 +48,10 @@
   .video-tabs{grid-template-columns:1fr}
   .sticky div span{font-size:9px;color:#5ef08d;font-weight:700;direction:ltr;font-variant-numeric:tabular-nums}
 }
+
+/* mobile polish: tighter top bar, room for the taller sticky footer bar */
+@media(max-width:800px){
+  .offerbar{line-height:1;padding:11px 10px}
+  .offerbar .flame{font-size:13px}
+  footer{margin-bottom:140px}
+}
