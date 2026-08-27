@@ -57,3 +57,18 @@
   footer{margin-bottom:0}
   body{padding-bottom:150px}
 }
+
+/* ---- anchor price + slimmer sticky bar ---- */
+.save-badge{display:inline-block;background:#0f1210;color:#5ef08d;font:800 11px Cairo,Arial;padding:7px 12px;border-radius:100px;margin-bottom:16px}
+.was{font-size:13px;color:#7c8880;margin-top:2px}
+.was s{color:#9aa49c}
+.once{margin-top:14px}
+.price-copy h2{margin-bottom:0}
+.included{margin-top:24px}
+
+@media(max-width:800px){
+  .sticky{grid-template-columns:1fr auto}
+  .sticky>div b{font-size:14px}
+  .sticky .btn{grid-column:auto;padding:10px 18px}
+  body{padding-bottom:95px}
+}
