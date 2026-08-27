@@ -1,0 +1,32 @@
+server {
+    listen       ${PORT};
+    server_name  _;
+    root         /usr/share/nginx/html;
+    index        index.html;
+
+    # video seeking needs range requests; nginx serves them for static files
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # css/js are content-hashed in index.html, so they can cache hard
+    location ~* \.(css|js)$ {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    # media is immutable by filename
+    location ~* \.(mp4|jpg|jpeg|png|webp|svg|woff2?)$ {
+        add_header Cache-Control "public, max-age=2592000";
+    }
+
+    # html must revalidate so a new deploy is picked up immediately
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+
+    gzip on;
+    gzip_types text/css application/javascript text/html image/svg+xml;
+    gzip_min_length 512;
+
+    access_log off;
+}
