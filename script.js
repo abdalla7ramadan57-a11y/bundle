@@ -50,6 +50,6 @@ const WHATSAPP_NUMBER='201091339187';
 el.wa.onclick=(e)=>{
   e.preventDefault();
   if(el.wa.classList.contains('ended')) return;
-  const msg='كابشن — عايز أشترك في العرض: الباكدج كاملة (4 إضافات) لمدة 3 سنين بـ 500 جنيه بدل 2000.';
+  const msg='كابشن — عايز أشترك في العرض: الباكدج كاملة (5 إضافات) لمدة 3 سنين بـ 1000 جنيه.';
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
 };

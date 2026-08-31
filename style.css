@@ -145,3 +145,11 @@
 .pkg-card h3{font-size:24px}
 @media(max-width:900px) and (min-width:801px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.pkg-grid{grid-template-columns:1fr}}
+
+/* ---- five extensions ---- */
+.pkg-icon.br{background:#38bdf8;color:#04212e;box-shadow:0 0 30px rgba(56,189,248,.42)}
+.pkg-icon.em{background:#f97316;color:#fff;font-size:19px;box-shadow:0 0 30px rgba(249,115,22,.42)}
+.video-tabs{grid-template-columns:repeat(4,1fr)}
+.vtab b{font-size:13px}
+@media(max-width:1000px) and (min-width:801px){.video-tabs{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.video-tabs{grid-template-columns:1fr}}
