@@ -10,9 +10,9 @@ const anims=[
 const grid=document.getElementById('animGrid'),av=document.getElementById('animVideo'),an=document.getElementById('animName');
 anims.forEach(([name,file],i)=>{let b=document.createElement('button');b.className='anim-btn'+(i===0?' active':'');b.textContent=name;b.onclick=()=>{document.querySelectorAll('.anim-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');av.src='assets/videos/'+file;an.textContent=name;av.play().catch(()=>{});};grid.appendChild(b)});
 
-// ---- 48-hour offer countdown ----
-// موعد انتهاء العرض: السبت 29 أغسطس 2026، 9:00 مساءً بتوقيت القاهرة (UTC+3)
-const OFFER_END = new Date('2026-08-29T18:00:00Z');
+// ---- offer countdown ----
+// موعد انتهاء العرض: 5 سبتمبر 2026، 11:59 مساءً بتوقيت القاهرة (UTC+3)
+const OFFER_END = new Date('2026-09-05T20:59:00Z');
 const pad = n => String(n).padStart(2,'0');
 const el = {
   d:document.getElementById('cdD'), h:document.getElementById('cdH'),
@@ -50,6 +50,6 @@ const WHATSAPP_NUMBER='201091339187';
 el.wa.onclick=(e)=>{
   e.preventDefault();
   if(el.wa.classList.contains('ended')) return;
-  const msg='كابشن — عايز أشترك في عرض الـ48 ساعة: Auto Caption + Auto Cut لمدة 3 سنين بـ 500 جنيه بدل 2000.';
+  const msg='كابشن — عايز أشترك في العرض: Auto Caption + Auto Cut لمدة 3 سنين بـ 500 جنيه بدل 2000.';
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,'_blank');
 };
