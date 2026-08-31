@@ -137,3 +137,6 @@
   .pkg .g2{width:300px;height:300px;bottom:-120px;left:-80px}
   .pkg .g3{display:none}
 }
+
+.pkg-icon.gc{background:#38bdf8;color:#04212e;box-shadow:0 0 30px rgba(56,189,248,.4)}
+.pkg-card .note{font-size:11px;color:#7f8a83;margin:14px 0 0;line-height:1.7}
