@@ -139,3 +139,9 @@
 
 .pkg-icon.gc{background:#8b5cf6;color:#fff;box-shadow:0 0 30px rgba(139,92,246,.45)}
 .pkg-card .note{font-size:11px;color:#7f8a83;margin:14px 0 0;line-height:1.7}
+
+/* three tools now — balance them on one row */
+.pkg-grid{grid-template-columns:repeat(3,1fr)}
+.pkg-card h3{font-size:24px}
+@media(max-width:900px) and (min-width:801px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){.pkg-grid{grid-template-columns:1fr}}
