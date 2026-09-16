@@ -153,3 +153,32 @@
 .vtab b{font-size:13px}
 @media(max-width:1000px) and (min-width:801px){.video-tabs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:800px){.video-tabs{grid-template-columns:1fr}}
+
+/* ---- two paid tools + two gifts ---- */
+.pkg-grid.two{grid-template-columns:repeat(2,1fr)}
+.pkg-icon.fx{background:#f59e0b;color:#2a1a00;box-shadow:0 0 30px rgba(245,158,11,.45)}
+.pkg-icon.th{background:#ec4899;color:#fff;box-shadow:0 0 30px rgba(236,72,153,.42)}
+
+.gifts-head{display:flex;align-items:center;gap:18px;margin:46px 0 18px;padding-top:34px;border-top:1px solid #1f2723}
+.gifts-badge{flex:none;background:linear-gradient(135deg,#f59e0b,#fbbf24);color:#2a1a00;font:800 12px Cairo,Arial;padding:9px 15px;border-radius:100px;box-shadow:0 0 34px rgba(245,158,11,.4)}
+.gifts-head p{margin:0;font-size:13px;line-height:1.9;color:#9aa59d}
+.gifts-head strong{color:#fbbf24;font-weight:800}
+
+.pkg-card.gift{border-color:#3a2f12;background:rgba(245,158,11,.05)}
+.pkg-card.gift:hover{border-color:#f59e0b;box-shadow:0 0 0 1px rgba(245,158,11,.25),0 18px 60px rgba(245,158,11,.16)}
+.pkg-card.gift .text-btn{color:#fbbf24}
+.pkg-card.gift li:before{color:#fbbf24}
+.gift-tag{position:absolute;left:24px;top:24px;font:800 10px Cairo,Arial;color:#fbbf24;border:1px solid #4a3a14;background:#1d1708;padding:5px 10px;border-radius:100px}
+
+.gift-strip{margin-top:24px;background:#fff8e9;border:1px solid #f2dfb4;border-radius:16px;padding:14px 16px;font-size:12.5px;line-height:1.85;color:#6b5a2e}
+.gift-strip strong{color:#8a6a15}
+
+.offerbar .bar-note{color:#9fd8b4;font-weight:600}
+.price-box>small{display:block}
+
+@media(max-width:800px){
+  .pkg-grid.two{grid-template-columns:1fr}
+  .gifts-head{flex-direction:column;align-items:flex-start;gap:12px;margin-top:34px}
+  .gift-tag{left:18px;top:18px}
+  .pkg-card.gift{padding-top:52px}
+}
