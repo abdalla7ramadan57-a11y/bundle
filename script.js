@@ -10,6 +10,38 @@ const anims=[
 const grid=document.getElementById('animGrid'),av=document.getElementById('animVideo'),an=document.getElementById('animName');
 anims.forEach(([name,file],i)=>{let b=document.createElement('button');b.className='anim-btn'+(i===0?' active':'');b.textContent=name;b.onclick=()=>{document.querySelectorAll('.anim-btn').forEach(x=>x.classList.remove('active'));b.classList.add('active');av.src='assets/videos/'+file;an.textContent=name;av.play().catch(()=>{});};grid.appendChild(b)});
 
+// ---- Text Hooks gallery (45 de-duplicated style previews) ----
+const HOOKS=45, hookGrid=document.getElementById('hookGrid'),
+      hookVid=document.getElementById('hookVideo'), hookName=document.getElementById('hookName');
+if(hookGrid){
+  const pad=n=>String(n).padStart(2,'0');
+  const show=n=>{
+    document.querySelectorAll('.hook-thumb').forEach(x=>x.classList.remove('active'));
+    const btn=hookGrid.children[n-1]; if(btn) btn.classList.add('active');
+    hookVid.src='assets/texthooks/th_'+pad(n)+'.mp4';
+    hookVid.poster='assets/texthooks/th_'+pad(n)+'.jpg';
+    hookName.textContent='Style '+pad(n);
+    hookVid.play().catch(()=>{});
+  };
+  for(let n=1;n<=HOOKS;n++){
+    const b=document.createElement('button');
+    b.className='hook-thumb'+(n===1?' active':'');
+    b.type='button';
+    b.setAttribute('aria-label','Text Hook Style '+pad(n));
+    const img=document.createElement('img');
+    img.src='assets/texthooks/th_'+pad(n)+'.jpg';
+    img.alt='Text Hook Style '+pad(n);
+    img.loading='lazy'; img.width=320; img.height=180;
+    b.appendChild(img);
+    b.onclick=()=>show(n);
+    hookGrid.appendChild(b);
+  }
+  // first clip is set up without autoplaying a fetch until it scrolls into view
+  hookVid.poster='assets/texthooks/th_01.jpg';
+  const io2=new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){show(1);o.disconnect();}})},{rootMargin:'200px'});
+  io2.observe(document.querySelector('.hook-stage'));
+}
+
 // ---- WhatsApp order ----
 const WHATSAPP_NUMBER='201091339187';
 document.getElementById('whatsappBtn').onclick=(e)=>{
