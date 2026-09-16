@@ -211,3 +211,173 @@
   .hook-meta{right:22px;bottom:20px}
   .hook-meta b{font-size:15px}
 }
+
+/* ==================================================================
+   CONVERSION LAYER — hero offer card, price ladder, support, FAQ,
+   final CTA. Mobile-first: every block below collapses to one column
+   and the hero offer stays close to the fold on a phone.
+   ================================================================== */
+
+.pill.social{border-color:#cfe6d6;background:#f4fbf6;font-size:12.5px}
+.pill.social strong{color:var(--green2);font-weight:800}
+
+h1{margin-bottom:18px}
+.hero .lead{font-size:17px}
+
+/* ---- hero offer card ---- */
+.hero-offer{max-width:520px;margin:30px auto 0;background:#0b0f0c;color:#fff;border:1px solid #1f2723;border-radius:26px;padding:22px 22px 20px;box-shadow:0 24px 70px rgba(10,22,14,.18)}
+.ho-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+.ho-label{font:800 11px Cairo,Arial;letter-spacing:1.5px;color:#8fa096}
+.ho-tier{font:800 11px Cairo,Arial;color:#07140b;background:#5ef08d;padding:5px 10px;border-radius:100px}
+.ho-price{display:flex;align-items:baseline;justify-content:center;gap:8px;margin:6px 0 2px}
+.ho-price b{font:900 64px/1 Cairo,Arial;letter-spacing:-3px;color:#fff;font-variant-numeric:tabular-nums}
+.ho-price span{font-size:15px;font-weight:700;color:#9fb0a5}
+.ho-sub{text-align:center;font-size:12.5px;color:#9aa59d;margin-bottom:16px}
+.ho-sub strong{color:#5ef08d}
+.ho-next{margin-top:14px;text-align:center;font-size:12px;color:#9aa59d}
+.ho-next strong{color:#fbbf24}
+
+/* ---- shared countdown cells ---- */
+.cd-row{display:flex;gap:8px;justify-content:center}
+.cd-cell{flex:1;max-width:96px;background:#141a16;border:1px solid #232b26;border-radius:14px;padding:11px 6px;display:flex;flex-direction:column;align-items:center;gap:3px}
+.cd-cell b{font:900 27px/1 Arial;color:#fff;font-variant-numeric:tabular-nums}
+.cd-cell span{font-size:9.5px;color:#8b968f;font-weight:600}
+[data-countdown][hidden],[data-next-wrap][hidden]{display:none !important}
+
+/* ---- CTA ---- */
+.btn.cta-main{font-size:15px;padding:17px 26px;gap:10px}
+button.btn,button.whatsapp{font-family:inherit;cursor:pointer}
+.cta-micro{max-width:520px;margin:12px auto 0;font-size:12px;line-height:1.8;color:var(--muted);text-align:center}
+.nav .buy{border:1px solid #1caf51}
+
+/* ---- package: three years vs permanent ---- */
+.tier-label{display:flex;align-items:center;gap:14px;margin:8px 0 16px}
+.tier-label .tl-badge{flex:none;font:800 11px Cairo,Arial;padding:8px 14px;border-radius:100px;background:#17261c;color:#5ef08d;border:1px solid #27402f}
+.tier-label .tl-badge.gift{background:linear-gradient(135deg,#f59e0b,#fbbf24);color:#2a1a00;border:0;box-shadow:0 0 30px rgba(245,158,11,.35)}
+.tier-label .tl-line{flex:1;height:1px;background:#222a25}
+.tier-label.gifts{margin-top:44px}
+.gifts-note{font-size:13px;line-height:1.9;color:#9aa59d;margin:0 0 16px}
+.gifts-note strong{color:#fbbf24}
+
+/* ---- price ladder ---- */
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:34px}
+.tier{border:1px solid var(--line);border-radius:22px;padding:22px;background:#fbfdfb;transition:border-color .2s,box-shadow .2s,opacity .2s}
+.tier .t-head{font-size:13px;font-weight:800;color:#5b675f}
+.tier .t-price{font:900 34px/1.2 Cairo,Arial;letter-spacing:-1.5px;margin:8px 0 6px}
+.tier .t-price span{font-size:13px;font-weight:700;color:#8a938c;letter-spacing:0}
+.tier .t-state{font-size:11px;font-weight:800;color:#9aa49c}
+.tier.current{border-color:var(--green);background:#f1fdf5;box-shadow:0 0 0 1px rgba(35,197,94,.35),0 16px 44px rgba(35,197,94,.14)}
+.tier.current .t-head,.tier.current .t-state{color:var(--green2)}
+.tier.upcoming{opacity:.55}
+.tier.past{opacity:.4}
+.tier.past .t-price{text-decoration:line-through;color:#9aa49c}
+
+.hl-ink{color:var(--green2)}
+
+/* ---- price box extras ---- */
+.price-box .box-cd{display:flex;gap:6px;margin:16px 0 10px;background:none;padding:0}
+.price-box .cd-cell{background:#0f1210;border-color:#232b26;padding:9px 4px}
+.price-box .cd-cell b{font-size:21px}
+.box-next{font-size:11.5px;color:#758078;text-align:center;margin-bottom:14px}
+.box-next strong{color:#0d8d3e}
+.price-box>small:first-child{display:block;color:#748078;margin-bottom:2px}
+
+/* ---- value breakdown ---- */
+.vbreak{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.vbreak div{background:#fff;border:1px solid #dce9df;border-radius:16px;padding:14px 12px;text-align:center}
+.vbreak b{display:block;font:900 22px/1.2 Cairo,Arial;color:var(--ink);font-variant-numeric:tabular-nums}
+.vbreak span{font-size:10.5px;color:#6b7a70}
+.vnote{margin:12px 0 0;font-size:11.5px;line-height:1.8;color:#6b7a70}
+.vnote strong{color:var(--ink)}
+
+/* ---- support strip ---- */
+.support{padding-bottom:90px}
+.sup-card{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border:1px solid var(--line);border-radius:26px;padding:26px;background:#fbfdfb}
+.sup-item{display:flex;gap:13px;align-items:flex-start}
+.sup-ico{font-size:22px;line-height:1}
+.sup-item h4{margin:0 0 5px;font-size:15px}
+.sup-item p{margin:0;font-size:12.5px;line-height:1.8;color:var(--muted)}
+
+/* ---- reviews (hidden until real screenshots exist) ---- */
+.reviews[hidden]{display:none}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.review{margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff}
+.review img{width:100%;height:auto;display:block}
+
+/* ---- FAQ ---- */
+.faq-sec{padding-bottom:90px}
+.faq{display:grid;gap:10px}
+.faq details{border:1px solid var(--line);border-radius:18px;background:#fbfdfb;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:17px 20px;font-weight:800;font-size:14.5px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";font:800 20px Arial;color:var(--green2);flex:none;transition:transform .2s}
+.faq details[open] summary:after{transform:rotate(45deg)}
+.faq details[open] summary{border-bottom:1px solid var(--line)}
+.faq p{margin:0;padding:15px 20px 18px;font-size:13px;line-height:1.95;color:var(--muted)}
+.faq p strong{color:var(--ink)}
+
+/* ---- final CTA ---- */
+.final-cta{padding-bottom:100px}
+.fc-card{position:relative;overflow:hidden;isolation:isolate;text-align:center;background:#080b09;color:#fff;border:1px solid #1f2723;border-radius:32px;padding:56px 32px}
+.fc-card .glow{position:absolute;border-radius:50%;filter:blur(110px);z-index:-1;pointer-events:none}
+.fc-card .fg1{width:460px;height:460px;background:rgba(35,197,94,.26);top:-200px;right:-110px}
+.fc-card .fg2{width:380px;height:380px;background:rgba(15,165,74,.2);bottom:-170px;left:-90px}
+.fc-card h2{font-size:clamp(28px,4.4vw,46px);line-height:1.2;letter-spacing:-1.6px;margin:0 0 10px}
+.fc-sub{margin:0 0 26px;color:#9aa59d;font-size:14px}
+.fc-price{margin-bottom:20px}
+.fc-price small{display:block;font:800 11px Cairo,Arial;letter-spacing:1.5px;color:#8fa096;margin-bottom:4px}
+.fc-price div{display:flex;align-items:baseline;justify-content:center;gap:8px}
+.fc-price b{font:900 60px/1 Cairo,Arial;letter-spacing:-3px;font-variant-numeric:tabular-nums}
+.fc-price span{font-size:15px;font-weight:700;color:#9fb0a5}
+.fc-card .cd-row{max-width:430px;margin:0 auto}
+.fc-next{margin:14px 0 22px;font-size:12.5px;color:#9aa59d}
+.fc-next strong{color:#fbbf24}
+.fc-card .cta-micro{color:#8b968f}
+
+/* ================= mobile first ================= */
+@media(max-width:800px){
+  .hero{padding-top:44px}
+  h1{font-size:clamp(34px,10vw,52px);letter-spacing:-1.6px}
+  .hero .lead{font-size:14.5px}
+  .pill.social{font-size:11.5px;padding:7px 12px}
+
+  .hero-offer{margin-top:24px;padding:18px 16px 16px;border-radius:22px}
+  .ho-price b{font-size:52px}
+  .cd-row{gap:6px}
+  .cd-cell{padding:9px 3px;border-radius:12px}
+  .cd-cell b{font-size:21px}
+  .cd-cell span{font-size:9px}
+
+  .btn.cta-main{width:100%;font-size:14px;padding:16px 18px}
+  .hero-actions{gap:10px}
+  .cta-micro{font-size:11.5px}
+
+  .tiers{grid-template-columns:1fr;gap:10px;margin-bottom:26px}
+  .tier{padding:16px 18px;border-radius:18px;display:grid;grid-template-columns:1fr auto;align-items:center}
+  .tier .t-price{margin:4px 0 0;font-size:26px}
+  .tier .t-state{grid-column:2;grid-row:1/3;text-align:left}
+
+  .tier-label{gap:10px}
+  .tier-label .tl-badge{font-size:10px;padding:7px 11px}
+  .tier-label.gifts{margin-top:32px}
+
+  .vbreak{grid-template-columns:1fr;gap:8px}
+  .vbreak div{display:flex;align-items:baseline;justify-content:center;gap:8px;padding:11px}
+  .vbreak b{font-size:19px}
+
+  .sup-card{grid-template-columns:1fr;gap:18px;padding:20px;border-radius:20px}
+  .support{padding-bottom:50px}
+
+  .review-grid{grid-template-columns:1fr}
+
+  .faq-sec{padding-bottom:50px}
+  .faq summary{font-size:13.5px;padding:15px 16px}
+  .faq p{padding:13px 16px 16px;font-size:12.5px}
+
+  .fc-card{padding:38px 18px;border-radius:24px}
+  .fc-price b{font-size:46px}
+  .final-cta{padding-bottom:60px}
+
+  .sticky div span{font-size:9px;color:#5ef08d;font-weight:700}
+  body{padding-bottom:95px}
+}
