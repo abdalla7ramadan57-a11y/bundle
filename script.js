@@ -49,13 +49,13 @@ if(hookGrid){
 
    To run the offer again, change OFFER_START only.
    Current schedule (times are Cairo, UTC+3):
-     stage 1    999  16 Sep 9:00 PM  ->  18 Sep 9:00 PM
-     stage 2  2,500  18 Sep 9:00 PM  ->  20 Sep 9:00 PM
-     stage 3  3,500  20 Sep 9:00 PM  ->  21 Sep 9:00 PM
+     stage 1    555  20 Sep 9:00 PM  ->  22 Sep 9:00 PM
+     stage 2  2,500  22 Sep 9:00 PM  ->  24 Sep 9:00 PM
+     stage 3  3,500  24 Sep 9:00 PM  ->  25 Sep 9:00 PM
 ------------------------------------------------------------------- */
-const OFFER_START = new Date('2026-09-16T18:00:00Z');
+const OFFER_START = new Date('2026-09-20T18:00:00Z');
 const TIERS = [
-  { price: 999, hours: 48, label: 'أول 48 ساعة' },
+  { price: 555, hours: 48, label: 'أول 48 ساعة' },
   { price: 2500, hours: 48, label: 'الـ48 ساعة التالية' },
   { price: 3500, hours: 24, label: 'آخر 24 ساعة' }
 ];
